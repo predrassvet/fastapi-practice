@@ -13,6 +13,5 @@ def hello(name: str) -> dict:
     return answer
 
 @app.get("/square/{number}")
-def square(number: int) -> dict:
-    square = {"square" : f"{number * number}"}
-    return square
+def square(number: int) -> int:
+    return number * number 
