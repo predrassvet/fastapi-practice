@@ -4,6 +4,15 @@ app = FastAPI()
 
 @app.get("/")
 def message() -> dict:
-    mess = {"massage" : "привет"}
+    mess = {"message" : "привет"}
     return mess
 
+@app.get("/hello/{name}")
+def hello(name: str) -> dict:
+    answer = {"hello" : f"hello {name}"}
+    return answer
+
+@app.get("/square/{number}")
+def square(number: int) -> dict:
+    square = {"square" : f"{number * number}"}
+    return square
